@@ -6,4 +6,8 @@ const tooeleTech = (Req, res) => {
   res.send("Tooele Tech is Awesome!");
 };
 
-module.exports = { awesomeFunction, tooeleTech };
+const personalFunction = (Req, res) => {
+  res.send("This is  a personal comment! Feel free to make your own!");
+};
+
+module.exports = { awesomeFunction, tooeleTech, personalFunction };
