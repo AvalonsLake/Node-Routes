@@ -7,7 +7,7 @@ const tooeleTech = (Req, res) => {
 };
 
 const personalFunction = (Req, res) => {
-  res.send("This is  a personal comment! Feel free to make your own!");
+  res.send("This is  a personal message! Feel free to make your own!");
 };
 
 module.exports = { awesomeFunction, tooeleTech, personalFunction };
