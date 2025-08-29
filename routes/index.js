@@ -5,6 +5,8 @@ routes.get("/", myController.awesomeFunction);
 
 routes.get("/ttech", myController.tooeleTech);
 
-routes.get("/personal", myController.personalFunction);
+routes.get("/students", myController.getAllStudents);
+
+routes.get("/new", myController.newFunction);
 
 module.exports = routes;

@@ -1,7 +1,8 @@
 # get the tooeletech route
 GET http://localhost:3000/ttech http/1.1
 
-
 # get the root path
 GET http://localhost:3000 http/1.1
 
+# Get all Students Route
+GET http://localhost:3000/students http/1.1
