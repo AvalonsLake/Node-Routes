@@ -9,6 +9,9 @@ routes.get("/students", myController.getAllStudents);
 
 routes.get("/student", myController.getSingleStudent);
 
+//auth routes
+routes.use("/auth", require("./auth"));
+
 routes.get("/createStudent", myController.createStudent);
 
 routes.get("/new", myController.newFunction);
