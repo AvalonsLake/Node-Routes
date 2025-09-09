@@ -2,20 +2,20 @@ const express = require("express");
 const router = express.Router();
 const authController = require("../controllers/authController");
 
-const protectedRoute = (req, res) => {
-  const authHeader = req.headers.authorization;
-  if (!authHeader) {
-    return res.status(401).json({ message: "No token provided" });
-  }
-  const token = authHeader.split(" ")[1];
-  try {
-    const decoded = jwt.verify(token, SECRET_KEY);
-    res.json({ message: "Protected content", user: decoded });
-  } catch (error) {
-    console.error("Error verifying token:", error);
-    res.status(401).json({ message: "Invalid token" });
-  }
-};
+// const protectedRoute = (req, res) => {
+//   const authHeader = req.headers.authorization;
+//   if (!authHeader) {
+//     return res.status(401).json({ message: "No token provided" });
+//   }
+//   const token = authHeader.split(" ")[1];
+//   try {
+//     const decoded = jwt.verify(token, SECRET_KEY);
+//     res.json({ message: "Protected content", user: decoded });
+//   } catch (error) {
+//     console.error("Error verifying token:", error);
+//     res.status(401).json({ message: "Invalid token" });
+//   }
+// };
 
 // routes
 router.get("/home", authController.home);
