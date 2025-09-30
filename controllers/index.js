@@ -96,7 +96,7 @@ const updateStudent = async (req, res) => {
       res
         .status(500)
         .json(
-          response.error || "Some erroer ocurred while updating the student"
+          response.error || "Some error ocurred while updating the student"
         );
     }
   } catch (error) {
