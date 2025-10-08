@@ -1,14 +1,6 @@
 const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId;
 
-const awesomeFunction = (Req, res) => {
-  res.send("Hello World!");
-};
-
-const tooeleTech = (Req, res) => {
-  res.send("Tooele Tech is Awesome!");
-};
-
 // GET all students
 
 const getAllStudents = async (Req, res) => {
