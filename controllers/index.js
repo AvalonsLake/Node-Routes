@@ -11,7 +11,7 @@ const getAllStudents = async (Req, res) => {
       res.status(200).json(lists);
     });
   } catch (error) {
-    res.status(500).json(error);
+    res.status(500).json({ message: "Error Fetching Students", error });
   }
 };
 
@@ -30,11 +30,11 @@ const getSingleStudent = async (Req, res) => {
       res.status(200).json(lists[0]);
     });
   } catch (error) {
-    res.status(500).json(error);
+    res.status(500).json({ message: "Error Fetching Student", error });
   }
 };
 
-// CREATE contact
+// CREATE STudent
 
 const createStudent = async (req, res) => {
   try {
@@ -115,8 +115,6 @@ const deleteStudent = async (req, res) => {
 };
 
 module.exports = {
-  awesomeFunction,
-  tooeleTech,
   getAllStudents,
   getSingleStudent,
   createStudent,
